@@ -29,9 +29,31 @@ m <- p[1:3]*i / 1-1/(1 + i)^n
 #End of Q3
 
 #Start Q4
+# Create variable x with a vector (1, 2, 3, 4, 5, 6)
+x <- c(1:6)
+
+# Create variable y with a vector (5, 5, 5, 5, 5, 5)
+y <- c(5)
+
+# Save the result of multiplying x and y to z
+z <- x * y
+z
+
+# 4b
+# Create variable x with a vector (4:19)
+x <- c(4:19)
+
+# Create variable y with a vector (0:3)
+y <- c(0:3)
+
+# Modulo
+z <- y %% x 
+z
+# end of Q4
 
 
-#End Q4
+
+
 # Create variable p with a vector (150000, 180000, 220000)
 p <- c(150000, 180000, 220000)
 x
