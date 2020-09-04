@@ -1,23 +1,39 @@
 #start of 3
 # firmula m = (p*i)/[1-(1/(1+i)^n)]
 
+# Assign $200000 in variable p
+p <- 200000
+
 # Assign 360 to variable n
 n <- 360
 
 # Assign .003 to variable i
 i <- 0.003
 
-# Assign $200000 in variable p
-p <- 200000
-
 # z/w then assign new variable M
 m <- p*i / 1-1/(1 + i)^n
 
+#start of 3b
+# Create variable p with a vecto6r (150000, 180000, 220000)
+p <- c(150000, 180000, 220000)
+
+# Assign 360 to variable n
+n <- 360
+
+# Assign .003 to variable i
+i <- 0.003
+
+#assign m to variable
+m <- p[1:3]*i / 1-1/(1 + i)^n
+
+#End of Q3
+
+#Start Q4
 
 
-
-# Create variable x with a vector (1, 2, 3, 4, 5)
-x <- c(1:5)
+#End Q4
+# Create variable p with a vector (150000, 180000, 220000)
+p <- c(150000, 180000, 220000)
 x
 
 # Create variable y with a vector (6, 7, 8, 9, 10)
