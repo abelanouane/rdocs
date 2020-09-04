@@ -97,16 +97,51 @@ z
 
 # x vector
 x.vec <- c(2,5,6,8,3)
-# add x.vec titles
-names(x.vec) <- c(Apple,Samsung,Amazon,CVS,Walmart)
-x.vec
 
+# add x.vec titles
+names(x.vec) <- c("Apple","Samsung","Amazon","CVS","Walmart")
+
+x.vec
 
 # End Q6
 
 # Start Q7
 
 y.mat <- matrix(1:12, nrow = 4, ncol = 3)
+
+nrownames <- c("AAA","AA", "A", "BBB")
+ncolnames <- c("New York","Boston", "Dallas")
+
+rownames(y.mat) <- nrownames
+colnames(y.mat) <- ncolnames
+
+y.mat
+# End Q7
+
+# Start Q8 
+
+myportfolio <- matrix(nrow = 3, ncol = 3)
+
+x.vec <- c(XXX,56, 1500)
+y.vec <- c(YYY, 86, 4100)
+z.vec <- c(ZZZ, 62, 2800)
+
+# # cbind (combining by column)
+cbind(x.vec, y.vec, z.vec)
+
+# rbind (combining by row)
+rbind(x.vec, y.vec, z.vec)
+
+rownames <- c("1","2", "3")
+colnames <- c("Company","Stock_Price", "Volume")
+
+rownames(myportfolio) <- rownames
+colnames(myportfolio) <- colnames
+
+myportfolio
+
+# End Q8
+
 
 # Creating vectors of stock prices
 samsung <- c(123.49, 124.39, 123.83, 127.39, 128.39, 127.48, 129.83, 128.93, 129.23)
