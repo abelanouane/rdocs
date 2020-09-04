@@ -5,31 +5,13 @@
 n <- 360
 
 # Assign .003 to variable i
-i <- .003
+i <- 0.003
 
 # Assign $200000 in variable p
 p <- 200000
 
-# * i and p
-i * p
-
-# * x and y, save the result to new variable z
-z <- i * p
-
-# (1+i)^n
-(1 + i) ^n
-
-# (1+i)^n, save the result to new variable x
-x <- (1 + i) ^n
-
-# 1/x then assign new variable y
-y <- 1 / x
-
-# 1-y then assign new variable w
-w <- 1-y
-
 # z/w then assign new variable M
-m <- z/w
+m <- p*i / 1-1/(1 + i)^n
 
 
 
