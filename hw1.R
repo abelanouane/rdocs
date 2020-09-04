@@ -1,5 +1,39 @@
-#start of 3
-# firmula m = (p*i)/[1-(1/(1+i)^n)]
+# Start Q1
+
+# Create a variable for ending_myinvestment
+ending_investment <- 21420
+
+# How much do you have at the start of February?
+feb_myinvestment <- ending_investment/1.05
+feb_myinvestment
+
+# How much do you have at the start of January?
+jan_myinvestment <- ending_investment/(1.05*1.02)
+jan_myinvestment
+
+#or
+jan_myinvestment <- feb_myinvestment/1.02
+jan_myinvestment
+
+#End Q1
+
+# Start Q2
+
+# Weighted average
+# Weights and returns
+ret_A <- 5
+ret_B <- -4
+weight_A <- 0.6
+weight_B <- 0.4
+
+# Portfolio return
+ret_portfolio <- weight_A*ret_A+weight_B*ret_B
+ret_portfolio
+
+# END Q2
+
+# Start Q3
+# formula m = (p*i)/[1-(1/(1+i)^n)]
 
 # Assign $200000 in variable p
 p <- 200000
@@ -23,12 +57,13 @@ n <- 360
 # Assign .003 to variable i
 i <- 0.003
 
-#assign m to variable
+# Assign m to variable
 m <- p[1:3]*i / 1-1/(1 + i)^n
 
-#End of Q3
+# End of Q3
 
-#Start Q4
+# Start Q4
+
 # Create variable x with a vector (1, 2, 3, 4, 5, 6)
 x <- c(1:6)
 
@@ -40,6 +75,7 @@ z <- x * y
 z
 
 # 4b
+
 # Create variable x with a vector (4:19)
 x <- c(4:19)
 
@@ -49,10 +85,44 @@ y <- c(0:3)
 # Modulo
 z <- y %% x 
 z
-# end of Q4
+
+# End Q4
+
+# Start Q5
 
 
+# End Q5
 
+# Start Q6
+
+# x vector
+x.vec <- c(2,5,6,8,3)
+# add x.vec titles
+names(x.vec) <- c(Apple,Samsung,Amazon,CVS,Walmart)
+x.vec
+
+
+# End Q6
+
+# Start Q7
+
+y.mat <- matrix(1:12, nrow = 4, ncol = 3)
+
+# Creating vectors of stock prices
+samsung <- c(123.49, 124.39, 123.83, 127.39, 128.39, 127.48, 129.83, 128.93, 129.23)
+apple <- c(100.12, 102.53, 101.29, 102.93, 104.21, 103.39, 104.95, 104.25, 105.47)
+
+# # cbind (combining by column)
+cbind(samsung, apple)
+
+# rbind (combining by row)
+rbind(samsung, apple)
+
+# Plot the matrix for stock prices of Samsung and Apple.
+samsung_apple_matrix <- cbind(samsung, apple)
+plot(samsung_apple_matrix)
+
+# End Q7
 
 # Create variable p with a vector (150000, 180000, 220000)
 p <- c(150000, 180000, 220000)
@@ -66,24 +136,7 @@ y
 z <- x * y
 z
 
-#START OF Q1
-# Create a variable for ending_myinvestment
-ending_investment <- 21420
 
-# How much do you have at the start of February?
-feb_myinvestment <- ending_investment/1.05
-feb_myinvestment
-
-
-# How much do you have at the start of January?
-jan_myinvestment <- ending_investment/(1.05*1.02)
-jan_myinvestment
-
-#or
-jan_myinvestment <- feb_myinvestment/1.02
-jan_myinvestment
-
-#END OF Q1
 
 # Assign the numeric 120 to samsung_stock
 samsung_stock <- 120
@@ -118,17 +171,7 @@ ret <- c(5, 2)
 names(ret) <- c("Jan", "Feb")
 ret
 
-#START OF Q2
-# Weighted average
-# Weights and returns
-ret_A <- 5
-ret_B <- -4
-weight_A <- 0.6
-weight_B <- 0.4
 
-# Portfolio return
-ret_portfolio <- weight_A*ret_A+weight_B*ret_B
-ret_portfolio
 
 # Alternative way (Portfolio return)
 ret <- c(5, -4)
