@@ -90,6 +90,19 @@ z
 
 # Start Q5
 
+# script provided
+
+set.seed(100)
+x <- round(rnorm(18, mean=2, sd=.1),2)
+x
+
+# created matrix 3x6 w/ x
+
+matrix(data=c(x), nrow=3, ncol=6)
+
+# Assign name
+x.mat <- matrix(data=c(x), nrow=3, ncol=6)
+
 
 # End Q5
 
