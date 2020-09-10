@@ -46,7 +46,7 @@ i <- 0.003
 
 # z/w then assign new variable M
 m <- p*i / 1-1/(1 + i)^n
-
+m
 #start of 3b
 # Create variable p with a vecto6r (150000, 180000, 220000)
 p <- c(150000, 180000, 220000)
@@ -59,7 +59,7 @@ i <- 0.003
 
 # Assign m to variable
 m <- p[1:3]*i / 1-1/(1 + i)^n
-
+m
 # End of Q3
 
 # Start Q4
