@@ -39,6 +39,7 @@ mystock
 # End of Q2
 
 # Start of Q3
+Start of Q3
 n <- 10
 repeat {
   #print (n)
@@ -46,33 +47,62 @@ repeat {
   n = n + 1
   
   if ((n %% 2) == 1) {
-  print (n)
+    print (n)
   }
   if (n == 24) {
     break
   }
 }
+#end 3
 
-n <- 10
-print(n)
-repeat {
-  if (n %% 2 == 0) {
+# start 4
+# while loop
+n <- 6
+while(n < 20){
+  if((n%%2) == 0){
     print(n)
   }
-  n <- n + 1
-  if (n == 24) {
-    break
+  n = n+1
+}
+#end 4
+#start 5
+n <- seq(from = 13, to = 28)
+
+for (i in n) {
+  if (i %% 2 == 0) {
+    print (i)
   }
 }
+#end 5
 
+# Start 6
 
-for (i in 1:24) {
-  # print(i)
-  if (i %% 2 !== 0) {
-    print(n)
-  } else if (i == 24) {
-    break
-  }
-}
+#install.packages("quantmod")
+#library(quantmod)
+#getSymbols("AMZN", src = "yahoo", from='2020-03-01', to='2020-04-30')
 
+AMZNAdj <- AMZN$AMZN.Adjusted
 
+# Convert prices to log returns
+logreturns <- diff(log(AMZNAdj))
+head(logreturns)
+
+# end 6
+
+# start 7
+library(quantmod)
+getSymbols("AAPL", src = "yahoo", from='2019-01-01', to='2019-12-31')
+
+AAPLAdj <- AAPL$AAPL.Adj
+# Create SP500 by reading S&P500.csv file
+AAPLAdj <- read.csv("C:/Users/adamb/Documents/Code_Projects/rdocs/APPL.cvs")
+# Convert the data frame into time series object from Jan 2009 to Dec 2018
+AAPLAdj_ts <- ts(AAPLAdj, start = 2019, frequency = 52)
+# Plot time series SP500_ts
+Plot(AAPLAdj_ts)
+
+AAPLAdj <- AAPL$AAPL.Adj
+# Convert the data frame into time series object from Jan 20019 to Dec 2019
+AAPLAdj_ts <- ts(AAPLAdj, start = 2019, frequency = 52)
+# Plot time series SP500_ts
+Plot(AAPLAdj_ts)
