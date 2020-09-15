@@ -12,14 +12,14 @@ today <- Sys.Date()
 format(today, format = "%m %d %Y")
 today
 
-# Part 1B change comments
+# Part 1B 
 # today's date
-sys.Date()
-# name date to todays date
-date <- sys.Date()
+Sys.Date()
+# name date to today.date
+Date <- Sys.Date()
 # asng name today.date to date
-today.date <- date
-today.date
+Today.Date <- Date
+Today.Date
 # End of Q1
 
 #2
@@ -39,7 +39,6 @@ mystock
 # End of Q2
 
 # Start of Q3
-Start of Q3
 n <- 10
 repeat {
   #print (n)
@@ -76,7 +75,6 @@ for (i in n) {
 #end 5
 
 # Start 6
-
 #install.packages("quantmod")
 #library(quantmod)
 #getSymbols("AMZN", src = "yahoo", from='2020-03-01', to='2020-04-30')
@@ -87,22 +85,23 @@ AMZNAdj <- AMZN$AMZN.Adjusted
 logreturns <- diff(log(AMZNAdj))
 head(logreturns)
 
+log_AMZNAdj <- head(logreturns)
 # end 6
 
-# start 7
-library(quantmod)
-getSymbols("AAPL", src = "yahoo", from='2019-01-01', to='2019-12-31')
-
+# start 7a
+#library(quantmod)
+#getSymbols("AAPL", src = "yahoo", from='2019-01-01', to='2019-12-31')
 AAPLAdj <- AAPL$AAPL.Adj
-# Create SP500 by reading S&P500.csv file
-AAPLAdj <- read.csv("C:/Users/adamb/Documents/Code_Projects/rdocs/APPL.cvs")
-# Convert the data frame into time series object from Jan 2009 to Dec 2018
-AAPLAdj_ts <- ts(AAPLAdj, start = 2019, frequency = 52)
-# Plot time series SP500_ts
-Plot(AAPLAdj_ts)
+# See if the dataset is a ts object
+is.ts(AAPLAdj)
 
-AAPLAdj <- AAPL$AAPL.Adj
-# Convert the data frame into time series object from Jan 20019 to Dec 2019
-AAPLAdj_ts <- ts(AAPLAdj, start = 2019, frequency = 52)
-# Plot time series SP500_ts
-Plot(AAPLAdj_ts)
+#7b
+
+monthly.AAPL <- monthlyReturn(AAPLAdj, subset=NULL, type='log', leading=TRUE) 
+# Auto correlation function
+acf(monthly.AAPL, lag.max = 10, plot = FALSE)
+
+# Partial auto correlation function estimates for SP500_ts up to lag 5
+pacf(monthly.AAPL, lag.max = 10, plot = FALSE)
+
+
